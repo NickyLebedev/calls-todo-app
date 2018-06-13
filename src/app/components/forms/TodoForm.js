@@ -52,7 +52,7 @@ export class TodoForm extends Component {
             <input
               type="text"
               maxLength="30"
-              placeholder={this.props.placeholder}
+              placeholder='Enter todo name'
               autoFocus="true"
               value={this.state.name}
               onChange={this.handleNameSelectionChange} required/>
@@ -61,7 +61,7 @@ export class TodoForm extends Component {
           <div className="form-field">
             <input
               type="text"
-              placeholder={this.props.placeholder}
+              placeholder='Enter phone number'
               pattern="([\+]?)([\(]?)\d{3}([\)]?)([\-]?)([\s]?)\d{3}([\s]?)\d{s}([\s]?)\d{s}"
               value={this.state.phone}
               onChange={this.handlePhoneSelectionChange} required/>
