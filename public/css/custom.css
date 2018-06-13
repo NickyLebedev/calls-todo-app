@@ -1,12 +1,16 @@
 .header {
-    text-align: center;
+  text-align: center;
 }
 
 .rc-time-picker-input {
-    font-size: inherit;
+  font-size: inherit;
 }
 
-.form-wrapper > .form-field {
-    float: left;
-    margin-right: 5px;
+.form-wrapper>.form-field {
+  float: left;
+  margin-right: 5px;
+}
+
+.sort-column {
+  cursor: pointer;
 }

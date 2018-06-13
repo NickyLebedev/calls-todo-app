@@ -45,9 +45,9 @@ class TodoList extends Component {
         <thead>
           <tr>
             <th></th>
-            <th column="name" onClick={this.handleNameSortClick}>Name</th>
+            <th column="name" className="sort-column" onClick={this.handleNameSortClick}>Name</th>
             <th>Phone number</th>
-            <th column="time" onClick={this.handleTimeSortClick}>Time</th>
+            <th column="time" className="sort-column" onClick={this.handleTimeSortClick}>Time</th>
             <th>Other actions</th>
           </tr>
         </thead>

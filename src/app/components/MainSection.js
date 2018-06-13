@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Footer from './Footer'
 import VisibleTodoList from '../containers/VisibleTodoList'
+import mapUtcFormat from '../../utils'
 
 const MainSection = ({ todosCount, completedCount, actions, nearestTodo }) =>
   (
@@ -11,8 +12,12 @@ const MainSection = ({ todosCount, completedCount, actions, nearestTodo }) =>
           <div>
             <h4>Nearest call</h4>
             {nearestTodo
-              ? <span>{nearestTodo.name}</span>
-              : <span>Not exist</span>}
+              ? <ul>
+                  <li><label>Name:</label>{nearestTodo.name}</li>
+                  <li><label>Phone:</label>{nearestTodo.phone}</li>
+                  <li><label>Time:</label>{mapUtcFormat(nearestTodo.time)}</li>
+                </ul>
+              : <span>Not exists</span>}
           </div>
         }
       </div>

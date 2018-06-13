@@ -62,7 +62,7 @@ export class TodoForm extends Component {
             <input
               type="text"
               placeholder='Enter phone number'
-              pattern="([\+]?)([\(]?)\d{3}([\)]?)([\-]?)([\s]?)\d{3}([\s]?)\d{s}([\s]?)\d{s}"
+              pattern="([\+]?)([\(]?)\d{3}([\)]?)([\-]?)([\s]?)\d{3}([\s]?)\d{3}([\s]?)\d{3}"
               value={this.state.phone}
               onChange={this.handlePhoneSelectionChange} required/>
           </div>

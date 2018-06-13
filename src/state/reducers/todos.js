@@ -34,18 +34,16 @@ export function updateCompleted(list) {
 
 export function sortTodos(list, sortField, sortType) {
   let comparator
-  switch (sortField) {
-    case 'name':
-      comparator = sortType
+  if (sortField === 'name') {
+    comparator = sortType
         ? stringSortComparator
         : stringSortComparatorReverse
-      return list.sort(comparator)
-    case 'time':
-      comparator = sortType
+  } else if (sortField === 'time') {
+    comparator = sortType
         ? timeSortComparator
         : timeSortComparatorReverse
-      return list.sort(comparator)
   }
+  return list.sort(comparator)
 }
 
 export function updatePrimaryTodo(list, primaryTodo) {
@@ -61,7 +59,7 @@ export function updatePrimaryTodo(list, primaryTodo) {
     }
   }
 
-  return (targetIndex === -1) ? list[targetIndex] : null
+  return (targetIndex !== -1) ? list[targetIndex] : null
 }
 
 export default function todos(state = initialState, action) {
